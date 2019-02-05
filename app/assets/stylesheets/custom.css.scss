@@ -1,0 +1,189 @@
+$navbar-default-bg: #002244;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-default{
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+html, body {
+  font-family: helvetica;
+  font-size: 12px;
+}
+
+#logo {
+  float: left;
+  font-size: 3.0em;
+  color: white;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #E3A01B;
+}
+
+.caret {
+  color: #E3A01B;
+}
+
+.dropdown-toggle {
+  font-size: 1.5em;
+}
+
+.dropdown-menu {
+  font-size: 1.25em;
+  background-color: #E3A01B;
+  opacity: .70;
+}
+
+.jumbotron {
+  background-image: asset-url('RiverNight.jpg');
+  background-size: cover;
+  margin-bottom: 0px;
+  height: 100vh;
+  width: 100%;
+  filter: opacity(70%);
+}
+
+.jumbotron h1{
+  color: #fff;
+  font-size: 8em;
+  text-align: left;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+p.lead {
+  font-size: 2.5em;
+  color: white;
+  font-weight: bold;
+}
+
+.land-button {
+  background-color: #46B275;
+  color: white;
+  font-size: 2.5em;
+}
+
+.land-button:hover {
+  background-color:#E3A01B;
+  color: white;
+}
+
+.carousel-format {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #DFE1E7;
+  filter: drop-shadow(4px 4px 5px #3872B4);
+}
+
+.paragraph-image {
+  background-size: cover;
+  padding-left: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.image-caption {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  color: #C7C7C7;
+  font-size: 1.0em;
+  font-weight: thin;
+  font-family: helvetica;
+}
+
+.image-caption-right {
+  text-align: right;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  color: #C7C7C7;
+  font-size: 1.0em;
+  font-weight: thin;
+  font-family: helvetica;
+}
+
+.paragraph-body {
+  line-height: 200%;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  font-size: 1.40em;
+  h3 {
+    color: #3872B4;
+    font-weight: bold;
+    font-size: 2.0em;
+    margin-top: 50px;
+    margin-bottom: 25px;}
+  h4{
+    color: #C7C7C7;
+    font-weight: thin;
+    }
+  h5{
+      color: #C7C7C7;
+      font-weight: thin;
+      }
+
+  }
+
+.transit-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.25em;
+  h3 {
+    text-align: center;
+    color: #3872B4;
+    font-size: 2.0em;}
+  }
+
+.slogan {
+    font-size: 2.0em;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+.body-nav {
+  display: inline-block;
+  border-style: solid;
+  border-width: thin;
+  border-color: #C7C7C7;
+  font-size: 1.5em;
+  font-weight: thin;
+  padding: 10px;
+  margin-bottom: 90px;
+  margin-top: 20px;
+}
+
+.video {
+
+}
+
+.footer {
+  letter-spacing: 2.5px;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background-color: #002244;
+  color: white;
+}
+
+.address {
+  float: left;
+  margin-top: 10px;
+  text-indent: 0px;
+  font-size: 1em;
+}
+
+.social {
+  float: right;
+  margin-top: 10px;
+  text-indent: -35px;
+  font-size: 1em;
+}
