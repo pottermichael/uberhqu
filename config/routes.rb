@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
   get 'transitway', to: 'pages#transitway'
 
+  get 'planning', to: 'pages#planning'
+
+  get 'data', to: 'pages#data'
+
 end

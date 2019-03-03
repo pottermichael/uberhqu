@@ -1,0 +1,82 @@
+<h1>Hold control while clicking and dragging to tilt and rotate the map.</h1>
+<h3>Quintessential infill development, release valve</h3>
+<div id='map'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoibXBvdHRlciIsImEiOiJjajAxZGltM3UwNjF2MzJsczVnN3R2eTNnIn0._Sj0HRLt8VTQGTojMWYFfQ';
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mpotter/cjst6uv4wb7ii1fs8z4gbrnaw',
+    center: [-87.641029, 41.888174],
+    zoom: 13.5
+});
+
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'top-right');
+
+
+var framesPerSecond = 15;
+var initialOpacity = 1
+var opacity = initialOpacity;
+var initialRadius = 10;
+var radius = initialRadius;
+var maxRadius = 30;
+
+map.on('load', function () {
+
+    // Add a source and layer displaying a point which will be animated in a circle.
+    map.addSource('point', {
+        "type": "geojson",
+        "data": {
+            "type": "Point",
+            "coordinates": [
+                -87.646353, 41.896930
+            ]
+        }
+    });
+
+    map.addLayer({
+        "id": "point",
+        "source": "point",
+        "type": "circle",
+        "paint": {
+            "circle-radius": initialRadius,
+            "circle-radius-transition": {duration: 0},
+            "circle-opacity-transition": {duration: 0},
+            "circle-color": "#FFFFFF"
+        }
+    });
+
+    map.addLayer({
+        "id": "point1",
+        "source": "point",
+        "type": "circle",
+        "paint": {
+            "circle-radius": initialRadius,
+            "circle-color": "#000000"
+        }
+    });
+
+
+    function animateMarker(timestamp) {
+        setTimeout(function(){
+            requestAnimationFrame(animateMarker);
+
+            radius += (maxRadius - radius) / framesPerSecond;
+            opacity -= ( .9 / framesPerSecond );
+
+            map.setPaintProperty('point', 'circle-radius', radius);
+            map.setPaintProperty('point', 'circle-opacity', opacity);
+
+            if (opacity <= 0) {
+                radius = initialRadius;
+                opacity = initialOpacity;
+            }
+
+        }, 1000 / framesPerSecond);
+
+    }
+
+    // Start the animation.
+    animateMarker(0);
+});
+</script>
