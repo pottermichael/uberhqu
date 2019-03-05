@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 
   get 'planning', to: 'pages#planning'
 
-  get 'data', to: 'pages#database'
+  get 'data', to: 'pages#data'
 
 end
